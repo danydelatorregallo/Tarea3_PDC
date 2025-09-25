@@ -5,9 +5,9 @@ API REST para gestionar usuarios y persistir información en una base de datos, 
 
 ---
 
-## 📦 Instalación
+## Instalación
 
-### ✅ Prerrequisitos
+### Prerrequisitos
 - Python **3.8+**
 - [uv](https://github.com/astral-sh/uv) (gestor de paquetes Python moderno)
 
@@ -18,7 +18,7 @@ API REST para gestionar usuarios y persistir información en una base de datos, 
 git clone <tu-repo>
 cd user-api
 
-2. Crear entorno virtual e instalar dependencias
+### 2. Crear entorno virtual e instalar dependencias
 # Crear entorno virtual
 uv venv
 
@@ -29,7 +29,7 @@ source .venv/bin/activate # Linux / Mac
 # Instalar dependencias
 uv pip install fastapi uvicorn sqlalchemy pydantic[email] python-dotenv
 
-3. Configurar variables de entorno
+### 3. Configurar variables de entorno
 
 Crea un archivo .env en la raíz del proyecto basándote en .env.example:
 
@@ -54,13 +54,13 @@ Aplicación: http://localhost:8000
 
 Documentación interactiva: http://localhost:8000/docs
 
-🔐 Autenticación
+Autenticación
 
 Todos los endpoints requieren el header:
 
 X-API-Key: tu_api_key_secreta_aqui
 
-📚 Endpoints disponibles
+Endpoints disponibles
 Método	Endpoint	Descripción
 POST	/api/v1/users/{user_id}	Crear un nuevo usuario
 GET	/api/v1/users/{user_id}	Obtener usuario por ID
@@ -97,7 +97,7 @@ Eliminar usuario
 curl -X DELETE "http://localhost:8000/api/v1/users/1" \
   -H "X-API-Key: tu_api_key_secreta_aqui"
 
-📌 Códigos de respuesta
+Códigos de respuesta
 Código	Descripción
 401	API Key inválida
 404	Usuario no encontrado
